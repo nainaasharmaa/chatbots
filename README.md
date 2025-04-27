@@ -47,7 +47,8 @@ A Python-based chatbot leveraging NLP techniques for smarter interactions.
    source venv/bin/activate   # Mac/Linux
    .\venv\Scripts\activate    # Windows
 2. pip install -r requirements.txt
-3.python app.py
+3. python app.py
+
 
 **Features**
 -Smart replies based on NLP
