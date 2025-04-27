@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Chatbot</title>
+    <style>
+        body{
+            background-color:pink;
+        }
+        .chat-container {
+            width: 500px;
+            margin: auto;
+            margin-top: 50px;
+            background-color:lightblue;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .chat-box {
+            height:250px;
+            width:480px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-color:black;
+            border-radius:10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>TravelBot</h1>
+        <div id="chat-box" class="chat-box"></div>
+        <input type="text" id="userInput" placeholder="Type your message here...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        async function sendMessage() {
+            let userText = document.getElementById("userInput").value;
+            if (!userText) return;
+
+            let chatBox = document.getElementById("chat-box");
+            chatBox.innerHTML += `<p><strong>You:</strong> ${userText}</p>`;
+            document.getElementById("userInput").value = "";
+
+            try {
+                const response = await fetch("/get", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ msg: userText })
+                });
+
+                const data = await response.json();
+                chatBox.innerHTML += `<p><strong>Bot:</strong> ${data.reply}</p>`;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            } catch (err) {
+                console.error("Error:", err);
+                chatBox.innerHTML += `<p><strong>Bot:</strong> Error talking to server.</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
+

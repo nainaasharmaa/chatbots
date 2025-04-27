@@ -1,0 +1,22 @@
+2025-04-13 17:58:34,130 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-13 17:58:34,130 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-13 17:58:34,133 - INFO -  * Restarting with stat
+2025-04-13 17:58:35,040 - WARNING -  * Debugger is active!
+2025-04-13 17:58:35,044 - INFO -  * Debugger PIN: 223-795-034
+2025-04-13 17:58:39,993 - INFO - 127.0.0.1 - - [13/Apr/2025 17:58:39] "GET / HTTP/1.1" 200 -
+2025-04-13 17:58:40,022 - INFO - 127.0.0.1 - - [13/Apr/2025 17:58:40] "[33mGET /static/style.css HTTP/1.1[0m" 404 -
+2025-04-13 17:58:56,463 - INFO - Received message: 'i want to go on destination wit budget 10,000'
+2025-04-13 17:58:56,507 - INFO - Sending response: 'Sorry, I couldn't find destinations within Rs.10 budget.'
+2025-04-13 17:58:56,508 - INFO - 127.0.0.1 - - [13/Apr/2025 17:58:56] "POST /get_response HTTP/1.1" 200 -
+2025-04-13 17:59:04,810 - INFO - Received message: '10,000'
+2025-04-13 17:59:04,811 - INFO - Sending response: 'I can help you find destinations within your budget. Please ask something like 'places under 10000' or 'budget destinations'.'
+2025-04-13 17:59:04,812 - INFO - 127.0.0.1 - - [13/Apr/2025 17:59:04] "POST /get_response HTTP/1.1" 200 -
+2025-04-13 17:59:17,148 - INFO - Received message: 'places under 10,000'
+2025-04-13 17:59:17,150 - INFO - Sending response: 'I can help you find destinations within your budget. Please ask something like 'places under 10000' or 'budget destinations'.'
+2025-04-13 17:59:17,151 - INFO - 127.0.0.1 - - [13/Apr/2025 17:59:17] "POST /get_response HTTP/1.1" 200 -
+2025-04-13 17:59:30,275 - INFO - Received message: 'places under 10000'
+2025-04-13 17:59:30,277 - INFO - Sending response: 'I can help you find destinations within your budget. Please ask something like 'places under 10000' or 'budget destinations'.'
+2025-04-13 17:59:30,278 - INFO - 127.0.0.1 - - [13/Apr/2025 17:59:30] "POST /get_response HTTP/1.1" 200 -
+2025-04-13 18:02:09,501 - INFO -  * Detected change in 'C:\\Users\\Naina Sharma\\Desktop\\chatbot\\app.py', reloading
+2025-04-13 18:02:09,625 - INFO -  * Restarting with stat
